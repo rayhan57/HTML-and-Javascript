@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobilku</title>
+    <link rel="stylesheet" href="beranda.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="img/logo.png" />
+      <ul>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="https://wa.me/089602878147">Kontak</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+      </ul>
+      <div class="kotak-cari">
+        <input
+          class="txt-cari"
+          id="search"
+          type="search"
+          placeholder="Ketik untuk mencari"
+          onchange="openPage() "
+        />
+        <a class="tombol-cari" href="#"><i class="fa fa-search"></i></a>
+      </div>
+      <h5>Dark Mode</h5>
+      <div class="mode">
+        <input type="checkbox" id="check" />
+        <div class="bulat"></div>
+      </div>
+      <a href="https://www.facebook.com/RAYHAN57/"
+        ><i class="fa fa-facebook"></i
+      ></a>
+      <a href="https://www.instagram.com/ryhn_lb/"
+        ><i class="fa fa-instagram"></i
+      ></a>
+      <i class="fa fa-angle-double-right"></i>
+    </div>
+    <div class="container">
+      <!-- COVER -->
+      <div class="cover">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+
+          <div class="slide first">
+            <img src="img/innova-cover.png" />
+            <div class="nama">
+              <h1 id="tulisan">Toyota Innova</h1>
+              <a href="innova.html"><button>Detail Toyota Innova</button></a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="img/rush-cover.png" />
+            <div class="nama">
+              <h1 id="tulisan">Toyota Rush</h1>
+              <a href="rush.html"><button>Detail Toyota Rush</button></a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="img/fortuner-cover.png" />
+            <div class="nama">
+              <h1 id="tulisan">Toyota Fortuner</h1>
+              <a href="fortuner.html"
+                ><button>Detail Toyota Fortuner</button></a
+              >
+            </div>
+          </div>
+          <div class="slide">
+            <img src="img/pajero-cover.png" />
+            <div class="nama">
+              <h1 id="tulisan">Mitsubishi Pajero Sport</h1>
+              <a href="pajero.html"
+                ><button>Detail Mitsubishi Pajero</button></a
+              >
+            </div>
+          </div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENT -->
+      <div class="content">
+        <h1 id="tulisan">Mobil SUV terbaik di tahun 2021</h1>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>© Rayhan Lingga Buana 2021. All right reserved.</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

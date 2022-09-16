@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.kotak {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 100px auto;
+  transition: 0.5s width, 0.5s height 0.3s, 1s background-color,
+    1s border-radius;
+}
+
+.ukuran {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.background {
+  background: salmon;
+}

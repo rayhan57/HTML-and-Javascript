@@ -1,0 +1,432 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+  color: azure;
+}
+
+.container {
+  width: 1360px;
+  height: auto;
+  margin: auto;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(16, 21, 39, 0.89);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(16, 21, 39, 0.89);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar img {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  margin-right: 400px;
+  transition: 0.5s ease-in-out;
+}
+
+ul {
+  display: flex;
+  margin-right: 50px;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 50px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: azure;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+ul li a:hover {
+  color: salmon;
+  transition: 0.5s ease-in-out;
+}
+
+.kotak-cari {
+  position: relative;
+  left: -10px;
+  background-color: rgba(16, 21, 39, 0.521);
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  margin-right: 20px;
+  display: flex;
+}
+
+.tombol-cari {
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  padding-left: 5px;
+  padding-top: 3px;
+  margin-left: 5px;
+  margin-top: -5px;
+}
+
+.txt-cari {
+  border: none;
+  outline: none;
+  float: left;
+  color: azure;
+  background-color: transparent;
+  font-size: 15px;
+  transition: 0.5s ease-in-out;
+  line-height: 20px;
+  width: 0;
+}
+
+.kotak-cari:hover > .txt-cari {
+  width: 180px;
+}
+
+.tombol-cari:hover > i.fa.fa-search {
+  color: salmon;
+}
+
+.navbar i {
+  color: azure;
+  margin-right: 20px;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+i.fa.fa-facebook:hover {
+  color: lightskyblue;
+}
+
+i.fa.fa-instagram:hover {
+  color: blueviolet;
+}
+
+.cover {
+  top: -50px;
+  width: 1370px;
+  height: 550px;
+  margin: auto;
+}
+
+.cover img {
+  display: block;
+  width: 100%;
+  height: 600px;
+}
+
+.cover h2 {
+  position: relative;
+  top: -350px;
+  left: 800px;
+  color: azure;
+  font-size: 50px;
+}
+
+.cover p {
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  font-size: 17px;
+  color: azure;
+  position: relative;
+  left: 850px;
+  top: -340px;
+}
+
+.ket-1 {
+  display: block;
+  width: 700px;
+  height: 100px;
+  box-sizing: border-box;
+  margin-top: 150px;
+  margin-left: 100px;
+  border-left: 10px solid salmon;
+  padding-left: 20px;
+}
+
+.ket-1 p {
+  line-height: 20px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.spek {
+  display: inline-block;
+  margin-top: 220px;
+  margin-left: 170px;
+  width: 200px;
+  height: 100px;
+}
+
+.spek.transmisi img {
+  position: absolute;
+  left: -60px;
+  width: 50px;
+  height: 50px;
+}
+
+.spek.mesin img {
+  position: absolute;
+  left: -70px;
+  top: -5px;
+  width: 50px;
+  height: 50px;
+}
+
+.spek.tenaga img {
+  position: absolute;
+  left: -70px;
+  top: -5px;
+  width: 50px;
+  height: 50px;
+}
+
+.spek.transmisi {
+  position: relative;
+  display: inline-block;
+  top: -180px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.spek .bensin {
+  float: left;
+  margin-top: 20px;
+}
+
+.spek span#bahanbakar {
+  font-size: 13px;
+}
+
+.spek .diesel {
+  margin-top: 20px;
+  float: right;
+  margin-right: 20px;
+}
+
+.spek.mesin {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  top: -180px;
+  padding: 5px;
+}
+
+.spek.tenaga {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  top: -180px;
+  padding: 5px;
+}
+
+.thumbnail {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  margin-top: -100px;
+  box-sizing: border-box;
+}
+
+.thumbnail .gambar-1 img {
+  width: 600px;
+}
+
+.thumbnail .gambar-2 img {
+  width: 400px;
+}
+
+.thumbnail .gambar-2 p {
+  background-color: rgb(255, 98, 81);
+  display: block;
+  height: 133px;
+  line-height: 130px;
+  margin-top: -4px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.thumbnail .gambar-3 p {
+  height: 167px;
+  display: block;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  line-height: 130px;
+}
+
+.thumbnail .gambar-3 img {
+  width: 350px;
+}
+
+.ket-2 {
+  width: 100%;
+  height: 650px;
+  background-image: url(img/innova6.jpg);
+  background-size: cover;
+  background-position: 0px -30px;
+  background-repeat: no-repeat;
+}
+
+.ket-2 .kelebihan {
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 120px;
+  box-sizing: border-box;
+  width: 250px;
+  height: 100px;
+  font-size: 15px;
+}
+
+.kelebihan.satu {
+  position: relative;
+  top: 35px;
+}
+
+.kelebihan.satu img {
+  position: relative;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+}
+
+.kelebihan.satu h2 {
+  margin-top: -50px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.kelebihan.dua {
+  position: relative;
+  top: 20px;
+}
+
+.kelebihan.dua img {
+  position: relative;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+}
+
+.kelebihan.dua h2 {
+  margin-top: -50px;
+  padding-bottom: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+.kelebihan.tiga {
+  position: relative;
+  top: 200px;
+  left: -748px;
+}
+
+.kelebihan.tiga img {
+  position: relative;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+}
+
+.kelebihan.tiga h2 {
+  margin-top: -50px;
+  padding-bottom: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+.kelebihan.empat {
+  position: relative;
+  left: 375px;
+}
+
+.kelebihan.empat img {
+  position: relative;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+}
+
+.kelebihan.empat h2 {
+  margin-top: -50px;
+  padding-bottom: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+.ket-2 .tipe {
+  width: 800px;
+  height: 150px;
+  margin-left: 100px;
+}
+
+.ket-2 .tipe h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
+  padding-bottom: 10px;
+}
+
+.ket-2 .tipe p {
+  font-family: sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.ket-3 {
+  width: 100%;
+  height: 500px;
+  background-image: url(img/innova4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-position: 0px -150px;
+}
+
+.ket-3 .opsimesin {
+  width: 500px;
+  height: 300px;
+  display: block;
+  float: right;
+  margin-top: 160px;
+  margin-right: 50px;
+  text-align: right;
+}
+
+.ket-3 .opsimesin h2 {
+  font-weight: 100;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+.ket-3 .opsimesin p {
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-size: 15px;
+  line-height: 20px;
+}

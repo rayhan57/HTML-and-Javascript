@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: cursive;
+}
+
+.day {
+  display: flex;
+  justify-content: center;
+}
+
+.day h1 {
+  color: crimson;
+  display: flex;
+  justify-content: center;
+  margin: 70px 5px;
+  animation: Gradient 5s linear infinite alternate;
+  -webkit-box-reflect: below -15px linear-gradient(transparent, rgba(0, 0, 0, 0.459));
+}
+
+.waktu {
+  display: flex;
+}
+
+.waktu div {
+  position: relative;
+  margin: 10px 5px;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.459));
+}
+
+.waktu div span {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 150px;
+  color: crimson;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  cursor: default;
+}
+
+div span:nth-child(1) {
+  animation: Color 60s infinite alternate;
+}
+
+div span:nth-child(2) {
+  height: 50px;
+  font-size: 25px;
+  background-color: darkblue;
+}
+
+@keyframes Color {
+  0% {
+    background-color: #001185;
+  }
+
+  10% {
+    background-color: #003e70;
+  }
+
+  20% {
+    background-color: #007700;
+  }
+
+  30% {
+    background-color: #00ba00;
+  }
+
+  40% {
+    background-color: #fff900;
+  }
+  50% {
+    background-color: #ff8100;
+  }
+  60% {
+    background-color: #ff4f00;
+  }
+  70% {
+    background-color: #e12400;
+  }
+  80% {
+    background-color: #af062c;
+  }
+  90% {
+    background-color: #660d3f;
+  }
+  100% {
+    background-color: #230051;
+  }
+}
+
+@keyframes Gradient {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}

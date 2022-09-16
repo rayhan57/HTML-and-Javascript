@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  background: 
+    url(bg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 657px;
+}
+
+.navbar {
+  width: 1200px;
+  height: 75px;
+  margin: auto;
+}
+
+.icon {
+  width: 200px;
+  float: left;
+  height: 70px;
+}
+
+.logo {
+  color: lightcoral;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  float: left;
+  padding-top: 10px;
+}
+
+.menu {
+  width: 400px;
+  float: left;
+  height: 70px;
+}
+
+ul {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: wheat;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+  color: red;
+}
+
+.search {
+  width: 300px;
+  float: left;
+  margin-left: 300px;
+}
+
+.cari {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  float: left;
+  border: 1px solid wheat;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  color: white;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  background: salmon;
+  border: 1px solid wheat;
+  color: wheat;
+  margin-top: 10px;
+  font-size: 15px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.cari:focus {
+  outline: none;
+}
+
+.content {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  color: wheat;
+  position: relative;
+}
+
+.content .paragraf {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+.content h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  padding-left: 20px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.content .cn {
+  width: 150px;
+  height: 50px;
+  background: salmon;
+  border: 1px solid salmon;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.content .cn a {
+  text-decoration: none;
+  color: wheat;
+  transition: 0.3s ease;
+}
+
+.cn:hover {
+  background-color: aqua;
+}
+
+.content span {
+  color: salmon;
+}
+
+.login {
+  width: 250px;
+  height: 500px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
+  position: absolute;
+  top: -20px;
+  left: 800px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.login h2 {
+  width: 200px;
+  font-size: 25px;
+  font-family: sans-serif;
+  color: salmon;
+  text-align: center;
+  margin: 2px;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+.login input {
+  width: 250px;
+  height: 40px;
+  background: transparent;
+  border-bottom: 1px solid wheat;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: white;
+  font-size: 15px;
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  padding-left: 5px;
+}
+
+.login input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tombol {
+  width: 250px;
+  height: 50px;
+  background-color: salmon;
+  border: none;
+  margin-top: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.tombol:hover {
+  background-color: aqua;
+  color: white;
+}
+
+.tombol a {
+  text-decoration: none;
+  color: wheat;
+}
+
+.login .link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.login .link a {
+  text-decoration: none;
+  color: salmon;
+}
+
+.login .link a:hover {
+  color: aqua;
+}
+
+.masukdgn {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.logologin {
+  text-align: center;
+}
+
+.logologin a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.logologin .google {
+  border-radius: 10px;
+}
+
+.logologin .fb {
+  border-radius: 10px;
+}
+
+.logologin .google:hover {
+  width: 50px;
+  transition: 0.5s ease;
+}
+
+.logologin .fb:hover {
+  width: 50px;
+  transition: 0.5s ease;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 220px;
+}
+
+.footer p {
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: white;
+}

@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 0;
+}
+
+.container {
+  width: 610px;
+  margin: 20px auto;
+  border: 5px double gray;
+  overflow: auto;
+  overflow-x: hidden;
+  box-shadow: 7px 7px 15px black;
+}
+
+.thumb {
+  width: 200px;
+  float: left;
+  border: 1px solid aquamarine;
+}
+
+.thumb:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.fade {
+  opacity: 0;
+  animation: pudar 0.5s forwards;
+}
+
+@keyframes pudar {
+  to {
+    opacity: 1;
+  }
+}

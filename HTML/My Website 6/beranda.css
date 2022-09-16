@@ -1,0 +1,477 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 1s ease-in-out;
+}
+
+body {
+  overflow-x: hidden;
+  transition: 3s ease-in-out;
+}
+
+.dark-mode {
+  background-color: black;
+  transition: 3s ease-in-out;
+}
+
+.container {
+  width: 1360px;
+  height: auto;
+  margin: auto;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(16, 21, 39, 0.89);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar img {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  margin-right: 400px;
+  transition: 0.5s ease-in-out;
+}
+
+.none {
+  margin-left: -157px;
+  opacity: 0.3;
+}
+
+ul {
+  display: flex;
+  margin-right: 50px;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 50px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: azure;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+ul li a:hover {
+  color: salmon;
+  transition: 0.5s ease-in-out;
+}
+
+.kotak-cari {
+  position: relative;
+  left: -10px;
+  background-color: rgba(16, 21, 39, 0.521);
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  margin-right: 20px;
+  display: flex;
+}
+
+.tombol-cari {
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  padding-left: 5px;
+  padding-top: 3px;
+  margin-left: 5px;
+  margin-top: -5px;
+}
+
+.txt-cari {
+  border: none;
+  outline: none;
+  float: left;
+  color: azure;
+  background-color: transparent;
+  font-size: 15px;
+  transition: 0.5s ease-in-out;
+  line-height: 20px;
+  width: 0;
+}
+
+.kotak-cari:hover > .txt-cari {
+  width: 180px;
+}
+
+.tombol-cari:hover > i.fa.fa-search {
+  color: salmon;
+}
+
+.navbar h5 {
+  color: azure;
+  margin-right: 10px;
+  font-family: sans-serif;
+}
+
+.mode {
+  width: 70px;
+  height: 30px;
+  background-color: azure;
+  border-radius: 50px;
+  font-size: 10px;
+  color: azure;
+  text-align: center;
+  margin-right: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.background {
+  background-color: skyblue;
+  transition: 0.5s ease-in-out;
+}
+
+input#check {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.mode .bulat {
+  background-color: black;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  margin-top: -31px;
+  margin-left: 2px;
+  transition: 1s ease-in-out;
+}
+
+input#check:checked ~ .bulat {
+  margin-left: 40px;
+  background-color: azure;
+  transition: 1s ease-in-out;
+}
+
+.navbar i {
+  color: azure;
+  margin-right: 20px;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+i.fa.fa-facebook:hover {
+  color: lightskyblue;
+}
+
+i.fa.fa-instagram:hover {
+  color: blueviolet;
+}
+
+.navbar i.fa.fa-angle-double-right {
+  display: none;
+}
+
+.cover {
+  width: 100%;
+  height: 610px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 600px;
+  display: flex;
+}
+
+.slides input {
+  display: block;
+  position: relative;
+  top: 600px;
+  left: 645px;
+  margin-left: 5px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+}
+
+.slide {
+  width: 100%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 1360px;
+  height: 600px;
+}
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 600px;
+  margin-left: 280px;
+}
+
+.navigation-auto div {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+  margin-left: 5px;
+}
+
+.nav-dark div {
+  border-color: azure;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -33.2%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -100%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -300%;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: rgb(130, 191, 230);
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: rgb(130, 191, 230);
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: rgb(130, 191, 230);
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: rgb(130, 191, 230);
+}
+
+.slide .nama {
+  width: 500px;
+  height: 200px;
+  position: relative;
+  top: -430px;
+  left: 50px;
+  font-family: sans-serif;
+}
+
+.nama h1 {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.warna-abu {
+  color: rgb(151, 149, 149);
+  transition: 1s ease-in-out;
+}
+
+.nama button {
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.nama button:hover {
+  background-color: rgba(16, 21, 39, 0.89);
+  color: azure;
+}
+
+/* CONTENT */
+.content {
+  width: 500px;
+  height: 100px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  background-color: rgba(16, 21, 39, 0.89);
+  color: azure;
+}
+
+/* UKURAN MOBILE */
+@media screen and (max-width: 576px) {
+  .navbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 40%;
+    height: 98vh;
+    display: inline-block;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .navbar img {
+    width: 150px;
+  }
+
+  ul {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  ul li {
+    margin-top: 10px;
+    list-style: none;
+    text-align: center;
+  }
+
+  ul li a:hover {
+    color: salmon;
+  }
+
+  .kotak-cari {
+    position: relative;
+    left: -10px;
+    background-color: rgba(16, 21, 39, 0.521);
+    height: 40px;
+    width: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    transition: 0.5s ease-in-out;
+    transform: translateX(50px);
+  }
+
+  .txt-cari {
+    border: none;
+    outline: none;
+    float: left;
+    color: azure;
+    background-color: transparent;
+    font-size: 12px;
+    transition: 0.5s ease-in-out;
+    line-height: 20px;
+  }
+
+  .kotak-cari:hover > .txt-cari {
+    width: 105px;
+  }
+
+  .kotak-cari:hover {
+    width: 150px;
+    transition: 0.5s ease-in-out;
+    transform: translateX(7px);
+  }
+
+  .navbar h5 {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .navbar .mode {
+    margin-left: 33px;
+  }
+
+  i.fa.fa-facebook {
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+
+  .navbar i.fa.fa-angle-double-right {
+    font-size: 30px;
+    position: relative;
+    left: 150px;
+    top: 30px;
+    color: salmon;
+  }
+
+  .cover {
+    width: 37%;
+    height: 300px;
+  }
+
+  .slide img {
+    width: 450px;
+    height: 300px;
+  }
+
+  .navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 280px;
+    margin-left: -200px;
+  }
+
+  h1#judul {
+    margin-left: -980px;
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .footer {
+    position: absolute;
+    z-index: 20;
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: -5.5%;
+  }
+
+  #radio2:checked ~ .first {
+    margin-left: -39.5%;
+  }
+
+  #radio3:checked ~ .first {
+    margin-left: -105%;
+  }
+
+  #radio4:checked ~ .first {
+    margin-left: -305%;
+  }
+
+  .slides input {
+    display: block;
+    position: relative;
+    top: 280px;
+    left: 163px;
+    margin-left: 5px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+  }
+
+  .slide .nama {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    top: -220px;
+    left: 50px;
+    font-family: sans-serif;
+  }
+
+  .nama h1 {
+    font-size: 30px;
+  }
+}

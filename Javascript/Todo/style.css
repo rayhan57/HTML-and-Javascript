@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #16213e;
+  color: white;
+  font-family: sans-serif;
+}
+
+.title {
+  margin: 50px 20px;
+}
+
+.add-task {
+  width: 300px;
+  margin-left: 20px;
+}
+
+.btnAdd {
+  width: 50px;
+  height: 30px;
+}
+
+.isi {
+  height: 30px;
+  font-size: 15px;
+}
+
+.list {
+  width: 300px;
+  height: auto;
+  margin: 50px 30px;
+}
+
+li {
+  padding: 7px;
+  background-color: #0f3460;
+  margin-top: 10px;
+}
+
+span:nth-child(1):hover {
+  cursor: pointer;
+}
+
+span:nth-child(2) {
+  color: red;
+  float: right;
+}
+
+span:nth-child(2):hover {
+  cursor: pointer;
+}
+
+.coret {
+  text-decoration: line-through;
+}

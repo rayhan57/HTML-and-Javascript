@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    html,
+    body {
+      height: 100%;
+    }
+    body {
+      text-align: center;
+    }
+    button {
+      cursor: pointer;
+    }
+    .skyblue {
+      background-color: skyblue;
+    }
+    .kotak {
+      width: 50px;
+      height: 50px;
+      margin: 20px auto;
+    }
+    .merah {
+      background-color: red;
+    }
+    .hijau {
+      background-color: green;
+    }
+    .biru {
+      background-color: blue;
+    }
+
+    input {
+      cursor: grab;
+    }
+  </style>
+
+  <body>
+    <h1>Mengubah Warna</h1>
+    <button type="button" id="ubahwarna">Ganti Warna</button>
+
+    <br />
+
+    <div class="kotak merah"></div>
+    <input type="range" name="slidermerah" min="0" max="255" />
+
+    <div class="kotak hijau"></div>
+    <input type="range" name="sliderhijau" min="0" max="255" />
+
+    <div class="kotak biru"></div>
+    <input type="range" name="sliderbiru" min="0" max="255" />
+
+    <script src="script.js"></script>
+  </body>
+</html>

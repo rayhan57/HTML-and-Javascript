@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login page.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="judul">Halaman Login</h1>
+      <form
+        class="login_page"
+        action="beranda.html"
+        method="post"
+        name="form"
+        onsubmit="return valid()"
+      >
+        <!-- Masukan email -->
+        <input
+          id="email"
+          type="text"
+          autocomplete="off"
+          name="email"
+          placeholder="Masukan alamat email"
+        />
+        <div class="email_error">Alamat email anda tidak valid</div>
+        <!-- Masukan password -->
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Masukan password"
+        />
+        <div class="password_error">Password anda salah</div>
+        <!-- login button -->
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

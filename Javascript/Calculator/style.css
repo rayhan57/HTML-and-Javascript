@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: rgb(6, 6, 51);
+  overflow-y: hidden;
+}
+
+.cover {
+  display: flex;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  justify-content: center;
+  align-items: center;
+  transition: 3s ease-in-out;
+}
+
+.cover button {
+  border: none;
+  width: 300px;
+  height: 60px;
+  color: darkred;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+.cover button:hover {
+  background-color: red;
+  box-shadow: 0px 0px 10px red, 0px 0px 40px red, 0px 0px 80px red;
+  cursor: pointer;
+  color: white;
+}
+
+.pembungkus {
+  width: 40px;
+  height: 30px;
+  background-color: rgb(116, 116, 116);
+  position: absolute;
+  bottom: -30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0.3;
+}
+
+i#panah {
+  color: lightcyan;
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+i#panah:hover {
+  text-shadow: 0px 0px 10px lightcyan, 0px 0px 40px lightcyan,
+    0px 0px 80px lightcyan;
+  cursor: pointer;
+}
+
+.pembungkus:hover {
+  opacity: 1;
+}
+
+h1 {
+  color: lightcyan;
+  text-shadow: 0px 0px 10px lightcyan, 0px 0px 40px lightcyan,
+    0px 0px 80px lightcyan;
+  margin-top: -370px;
+  position: absolute;
+}
+
+.calculator {
+  position: relative;
+  display: grid;
+  box-shadow: 0px 0px 10px lightblue, 0px 0px 40px lightblue;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.calculator .value {
+  grid-column: span 4;
+  height: 50px;
+  text-align: right;
+  border: none;
+  border-bottom: 1px solid lightblue;
+  outline: none;
+  padding: 10px;
+  font-size: 20px;
+  color: lightblue;
+  text-shadow: 0px 0px 10px lightblue, 0px 0px 40px lightblue;
+  background-color: navy;
+}
+
+.calculator span {
+  display: grid;
+  width: 80px;
+  height: 50px;
+  color: lightblue;
+  background-color: darkblue;
+  place-items: center;
+  border: 1px solid lightblue;
+  border-radius: 10px;
+}
+
+.calculator span:hover {
+  background-color: lightblue;
+  color: darkblue;
+  box-shadow: 0px 0px 10px lightblue, 0px 0px 40px lightblue,
+    0px 0px 80px lightblue;
+  cursor: pointer;
+}
+
+.calculator span.hapus {
+  grid-column: span 2;
+  width: 160px;
+}
+
+.calculator span.tambah {
+  grid-row: span 2;
+  height: 100px;
+}

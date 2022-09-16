@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <h1>Kalkulator Javascript</h1>
+    <form class="calculator" name="calcu">
+      <input class="value" type="text" name="teks" />
+      <span class="angka hapus" onclick="document.calcu.teks.value = ''"
+        >C</span
+      >
+      <span class="angka" onclick="document.calcu.teks.value += '/'">/</span>
+      <span class="angka" onclick="document.calcu.teks.value += '*'">*</span>
+      <span class="angka" onclick="document.calcu.teks.value += '7'">7</span>
+      <span class="angka" onclick="document.calcu.teks.value += '8'">8</span>
+      <span class="angka" onclick="document.calcu.teks.value += '9'">9</span>
+      <span class="angka" onclick="document.calcu.teks.value += '-'">-</span>
+      <span class="angka" onclick="document.calcu.teks.value += '4'">4</span>
+      <span class="angka" onclick="document.calcu.teks.value += '5'">5</span>
+      <span class="angka" onclick="document.calcu.teks.value += '6'">6</span>
+      <span class="angka tambah" onclick="document.calcu.teks.value += '+'"
+        >+</span
+      >
+      <span class="angka" onclick="document.calcu.teks.value += '3'">3</span>
+      <span class="angka" onclick="document.calcu.teks.value += '2'">2</span>
+      <span class="angka" onclick="document.calcu.teks.value += '1'">1</span>
+      <span class="angka" onclick="document.calcu.teks.value += '0'">0</span>
+      <span class="angka" onclick="document.calcu.teks.value += '00'">00</span>
+      <span class="angka" onclick="document.calcu.teks.value += '.'">.</span>
+      <span
+        class="angka"
+        onclick="document.calcu.teks.value = eval(calcu.teks.value)"
+        >=</span
+      >
+    </form>
+    <div class="cover">
+      <button id="btn">Klik Untuk Membuka Halaman</button>
+      <div class="pembungkus"><i class="fa fa-arrow-down" id="panah"></i></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

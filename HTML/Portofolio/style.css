@@ -1,0 +1,138 @@
+h1 {
+  width: 550px;
+  font-size: 100px;
+  top: 20rem;
+}
+.profile {
+  height: 600px;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(255, 174, 0, 0.5),
+      rgba(255, 174, 0, 0.5)
+    ),
+    url("img/pp.jpg");
+  background-position: 0px 50px;
+}
+.blue {
+  height: 600px;
+  background: rgb(55, 55, 238);
+}
+li {
+  list-style: none;
+}
+.focus {
+  background: rgb(55, 55, 238);
+  height: 550px;
+}
+.judul {
+  font-size: 60px;
+}
+.profile_dua {
+  position: absolute;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(255, 174, 0, 0.5),
+      rgba(255, 174, 0, 0.5)
+    ),
+    url("img/pp2.png");
+  background-position: 0px -200px;
+  width: 800px;
+  height: 500px;
+  margin-top: 5rem;
+}
+.ability {
+  background: rgb(55, 55, 238);
+  height: 350px;
+  margin-top: 5rem;
+}
+.gradient {
+  width: 20px;
+  height: 300px;
+  margin-left: 15rem;
+  background: linear-gradient(#ffb515, #2d3fff);
+}
+.quotee {
+  font-size: 50px;
+  margin-left: 15px;
+}
+.profile_tiga {
+  position: absolute;
+  right: 0px;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(255, 174, 0, 0.5),
+      rgba(255, 174, 0, 0.5)
+    ),
+    url("img/pp3.jpg");
+  background-position: 0px -220px;
+  width: 700px;
+  height: 500px;
+  margin-top: 10rem;
+}
+.footer {
+  height: 250px;
+  margin-top: 10rem;
+}
+.logo {
+  width: 200px;
+  margin-top: 5rem;
+}
+i {
+  font-size: 25px;
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    width: 300px;
+    font-size: 50px;
+    top: 28rem;
+  }
+  .profile {
+    height: 450px;
+  }
+  .blue {
+    height: 300px;
+  }
+  .project {
+    padding-top: 5rem;
+  }
+  .profile_dua {
+    position: absolute;
+    left: 0px;
+    width: 300px;
+    height: 200px;
+    margin-top: 32rem;
+    background-position: 0px -80px;
+  }
+  .ability {
+    height: 900px;
+    margin-top: 8rem;
+    padding: 20px;
+  }
+  .gradient {
+    height: 150px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+  .quotee {
+    margin-left: 4rem;
+    font-size: 18px;
+    margin-top: -10rem;
+  }
+  .profile_tiga {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    height: 200px;
+    margin-top: 32rem;
+    background-position: 0px -100px;
+  }
+  .footer {
+    height: 300px;
+    margin-top: 15rem;
+  }
+  .logo {
+    width: 200px;
+  }
+}

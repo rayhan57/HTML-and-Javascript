@@ -1,0 +1,60 @@
+/* Font Google */
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+
+* {
+  transition: 0.5s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+h1 {
+  font-family: "Titan One", cursive;
+  letter-spacing: 5px;
+  font-size: 48px;
+}
+.bg-gray {
+  background-color: rgb(230, 230, 230);
+}
+.bg-size {
+  height: 40vh;
+}
+.pt-6 {
+  padding-top: 10rem;
+}
+.jadwal {
+  margin-top: -7rem;
+}
+.bayangan {
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+}
+.box-hari:hover {
+  transform: translateY(-10px);
+}
+.today {
+  background-color: lightblue;
+  box-shadow: 0px 0px 10px lightblue;
+  box-shadow: 0px 0px 30px lightblue;
+  box-shadow: 0px 0px 50px lightblue;
+  animation: Gradient 5s linear infinite alternate;
+}
+@keyframes Gradient {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bg-size {
+    height: 50vh;
+  }
+
+  h1 {
+    margin-top: -8rem;
+    font-size: 28px;
+  }
+
+  .jadwal {
+    margin-top: -16rem;
+  }
+}
