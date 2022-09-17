@@ -6,14 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dicoding</title>
   </head>
+  <style>
+    body {
+      background-color: rgb(20, 20, 20);
+      color: white;
+    }
+  </style>
   <body>
     <h1>TES</h1>
     <script>
-      function calculate(value) {
-        return value < 2 ? value : calculate(value - 1) + calculate(value - 2);
+      class Animal {
+        constructor(name, age, isMamal) {
+          this.name = name;
+          this.age = age;
+          this.isMamal = isMamal;
+        }
       }
 
-      console.log(calculate(3));
+      class Rabbit extends Animal {
+        eat() {
+          return `${this.name} sedang makan!`;
+        }
+      }
+
+      class Eagle extends Animal {
+        fly() {
+          return `${this.name} sedang terbang!`;
+        }
+      }
+
+      let myRabbit = new Rabbit("Labi", 2, true);
+      let myEagle = new Eagle("Elo", 4, false);
+      console.log(myRabbit.eat());
+      console.log(myEagle.fly());
     </script>
   </body>
 </html>
