@@ -5,13 +5,13 @@ class ValidationError extends Error {
   }
 }
 
-const validateNumberInput = (pertama, kedua, ketiga) => {
+const validateNumberInput = (a, b, c) => {
   try {
-    if (typeof pertama !== "number") {
+    if (typeof a !== "number") {
       throw new ValidationError("Argumen pertama harus number");
-    } else if (typeof kedua !== "number") {
+    } else if (typeof b !== "number") {
       throw new ValidationError("Argumen kedua harus number");
-    } else if (typeof ketiga !== "number") {
+    } else if (typeof c !== "number") {
       throw new ValidationError("Argumen ketiga harus number");
     }
   } catch (err) {
@@ -19,19 +19,18 @@ const validateNumberInput = (pertama, kedua, ketiga) => {
   }
 };
 
-// console.log(validateNumberInput(3, 4, 5));
-
 const detectTriangle = (a, b, c) => {
   try {
-    validateNumberInput(2, 2, 2);
-    if (a === b && b === c) {
-      return "Segitiga sama sisi";
-    }
-    if (a === b || a === c || b === c) {
-      return "Segitiga sama kaki";
-    }
+    validateNumberInput(a, b, c);
   } catch (err) {
-    console.log(`Terjadi kesalahan ${err.message}`);
+    detectTriangle(a, b, c);
+  }
+  if (a === b && b === c) {
+    return "Segitiga sama sisi";
+  }
+  if (a === b || a === c || b === c) {
+    return "Segitiga sama kaki";
   }
   return "Segitiga sembarang";
 };
+console.log(detectTriangle(2, 2, 2));
