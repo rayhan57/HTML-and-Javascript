@@ -5,20 +5,25 @@ class NetworkError extends Error {
   }
 }
 
-const fetchingUserFromInternet = (callback, isOffline) => {
-  setTimeout(() => {
-    if (isOffline) {
-      callback(new NetworkError("Gagal mendapatkan data dari internet"), null);
-    }
-    callback(null, { name: "John", age: 18 });
-  }, 500);
+const fetchingUserFromInternet = (isOffline) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (isOffline) {
+        reject(new NetworkError("Gagal mendapatkan data dari internet"));
+      } else {
+        resolve({ name: "john", age: 18 });
+      }
+    }, 500);
+  });
 };
 
-const gettingUserName = () => {
-  fetchingUserFromInternet((error, user) => {
-    if (error) {
-      return error.message;
-    }
+const gettingUserName = async () => {
+  try {
+    const user = await fetchingUserFromInternet(false);
     return user.name;
-  }, false);
+  } catch (error) {
+    return error.message;
+  }
 };
+
+gettingUserName();
