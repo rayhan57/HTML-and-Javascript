@@ -1,34 +1,10 @@
-class ValidationError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = "ValidationError";
-  }
-}
-
-const validateNumberInput = (a, b, c) => {
-  if (typeof a !== "number") {
-    throw new ValidationError("Argumen pertama harus number");
-  } else if (typeof b !== "number") {
-    throw new ValidationError("Argumen kedua harus number");
-  } else if (typeof c !== "number") {
-    throw new ValidationError("Argumen ketiga harus number");
-  }
+const orderCoffee = () => {
+  let coffee;
+  console.log("Sedang membuat kopi, silakan tunggu...");
+  setTimeout(() => {
+    coffee = "Kopi sudah jadi!";
+  }, 3000);
+  return coffee;
 };
-
-const detectTriangle = (a, b, c) => {
-  try {
-    validateNumberInput(a, b, c);
-  } catch (err) {
-    if (err instanceof ValidationError) {
-      return err.message;
-    }
-  }
-  if (a === b && b === c) {
-    return "Segitiga sama sisi";
-  }
-  if (a === b || a === c || b === c) {
-    return "Segitiga sama kaki";
-  }
-  return "Segitiga sembarang";
-};
-console.log(detectTriangle(2, 2, 2));
+const coffee = orderCoffee();
+console.log(coffee);
