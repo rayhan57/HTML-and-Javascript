@@ -19,7 +19,9 @@ const detectTriangle = (a, b, c) => {
   try {
     validateNumberInput(a, b, c);
   } catch (err) {
-    detectTriangle(a, b, c);
+    if (err instanceof ValidationError) {
+      return err.message;
+    }
   }
   if (a === b && b === c) {
     return "Segitiga sama sisi";
