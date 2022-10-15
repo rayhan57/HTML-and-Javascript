@@ -6,16 +6,12 @@ class ValidationError extends Error {
 }
 
 const validateNumberInput = (a, b, c) => {
-  try {
-    if (typeof a !== "number") {
-      throw new ValidationError("Argumen pertama harus number");
-    } else if (typeof b !== "number") {
-      throw new ValidationError("Argumen kedua harus number");
-    } else if (typeof c !== "number") {
-      throw new ValidationError("Argumen ketiga harus number");
-    }
-  } catch (err) {
-    console.log(`Terjadi kesalahan ${err.message}`);
+  if (typeof a !== "number") {
+    throw new ValidationError("Argumen pertama harus number");
+  } else if (typeof b !== "number") {
+    throw new ValidationError("Argumen kedua harus number");
+  } else if (typeof c !== "number") {
+    throw new ValidationError("Argumen ketiga harus number");
   }
 };
 
