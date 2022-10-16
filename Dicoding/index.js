@@ -1,29 +1,14 @@
-class NetworkError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = "NetworkError";
+function findMin(a, b, c) {
+  let minValue = 0;
+
+  if (a < b) {
+    minValue = a;
+  } else if (b < c) {
+    minValue = b;
+  } else {
+    minValue = c;
   }
+
+  return minValue;
 }
-
-const fetchingUserFromInternet = (isOffline) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (isOffline) {
-        reject(new NetworkError("Gagal mendapatkan data dari internet"));
-      } else {
-        resolve({ name: "john", age: 18 });
-      }
-    }, 500);
-  });
-};
-
-const gettingUserName = async () => {
-  try {
-    const user = await fetchingUserFromInternet(false);
-    return user.name;
-  } catch (error) {
-    return error.message;
-  }
-};
-
-gettingUserName();
+console.log(findMin(2, 5, 7));
