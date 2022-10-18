@@ -3,213 +3,289 @@
    License: none (public domain)
    */
 
-   html, body, div, span, applet, object, iframe,
-   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-   a, abbr, acronym, address, big, cite, code,
-   del, dfn, em, img, ins, kbd, q, s, samp,
-   small, strike, strong, sub, sup, tt, var,
-   b, u, i, center,
-   dl, dt, dd, ol, ul, li,
-   fieldset, form, label, legend,
-   table, caption, tbody, tfoot, thead, tr, th, td,
-   article, aside, canvas, details, embed, 
-   figure, figcaption, footer, header, hgroup, 
-   menu, nav, output, ruby, section, summary,
-   time, mark, audio, video {
-   	margin: 0;
-   	padding: 0;
-   	border: 0;
-   	font-size: 100%;
-   	font: inherit;
-   	vertical-align: baseline;
-   }
-   /* HTML5 display-role reset for older browsers */
-   article, aside, details, figcaption, figure, 
-   footer, header, hgroup, menu, nav, section {
-   	display: block;
-   }
-   body {
-   	line-height: 1;
-   }
-   ol, ul {
-   	list-style: none;
-   }
-   blockquote, q {
-   	quotes: none;
-   }
-   blockquote:before, blockquote:after,
-   q:before, q:after {
-   	content: '';
-   	content: none;
-   }
-   table {
-   	border-collapse: collapse;
-   	border-spacing: 0;
-   }
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
+body {
+  font: 15px/30px cursive;
+  background-image: url(img/bg.png);
+  color: white;
+}
 
+.top_bar {
+  position: fixed;
+  background-color: lightblue;
+  border-bottom: 5px solid lightsalmon;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000;
+}
+.container {
+  width: 1000px;
+  margin: 80px auto;
+  background-color: black;
+  padding: 3px;
+  position: relative;
+}
 
-   body {
-   	font: 15px/30px cursive;
-   	background-image: url(img/bg.png);
-   	color: white;
-   }
+.facebook {
+  width: 150px;
+  height: 150px;
+  background-image: url(img/fb.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+  position: absolute;
+  top: -1px;
+  right: 1px;
+  background-position: -15px -48px;
+}
 
-   .top_bar {
-      position: fixed;
-      background-color: lightblue;
-      border-bottom: 5px solid lightsalmon;
-      height: 40px;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      z-index: 1000;
-   }
-   .container {
-   	width: 1000px;
-   	margin: 80px auto;
-   	background-color: black;
-   	padding: 3px;
-      position: relative;
-   }
+.header {
+  padding-top: 5px;
+}
 
-   .facebook {
-      width: 150px;
-      height: 150px;
-      background-image: url(img/fb.png);
-      background-repeat: no-repeat;
-      display: inline-block;
-      text-indent: -9999px;
-      position: absolute;
-      top: -1px;
-      right: 1px;
-      background-position: -15px -48px;
-   }
+.header .judul {
+  height: 80px;
+  width: 300px;
+  background-image: url(img/header.png);
+  background-size: cover;
+  background-position: 0 -50px;
+}
 
-   .header {
-   	padding-top: 5px;
-   }
+.header ul li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
 
-   .header .judul {
-      height: 80px;
-      width: 300px;
-      background-image: url(img/header.png);
-      background-size: cover;
-      background-position: 0 -50px;
+.header a {
+  text-decoration: none;
+  color: red;
+  padding: 5px;
+}
 
-   }
+.header a:hover {
+  background-color: lightblue;
+  color: white;
+}
 
-   .header ul li {
-   	display: inline-block;
-   	margin-right: 5px;
-   	margin-top: 15px;
-   	padding-left: 15px;
-   	padding-bottom: 10px;
+.hero {
+  height: 420px;
+  background-image: url(img/hero.png);
+  background-size: cover;
+  background-position: 0 -10px;
+  border-top: 5px solid orangered;
+  border-bottom: 5px solid lightsalmon;
+}
 
-   }
+.main {
+  width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+}
 
-   .header a {
-   	text-decoration: none;
-   	color: red;
-   	padding: 5px;
-   }
+.main h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-top: 5px;
+}
 
-   .header a:hover {
-   	background-color: lightblue;
-   	color: white;
-   }
+.main .penulis {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
 
-   
-   .hero {
-   	height: 420px;
-   	background-image: url(img/hero.png);
-   	background-size: cover;
-   	background-position: 0 -10px;
-   	border-top: 5px solid orangered;
-   	border-bottom: 5px solid lightsalmon;
-   }
+.main a {
+  text-decoration: none;
+  color: red;
+}
 
-   .main {
-      width: 600px;
-      padding: 20px;
-      box-sizing: border-box;
-      float: left;
-   }
+.main a:hover {
+  background-color: lightblue;
+  color: white;
+}
 
-   .main h2 {
-   	font-size: 30px;
-   	font-weight: bold;
-   	margin-left: 5px;
-   	margin-top: 5px;
-   }
+.main p {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
 
-   .main .penulis {
-   	font-size: 12px;
-   	margin-top: 10px;
-   	margin-left: 5px;
-   }
+.sidebar {
+  width: 300px;
+  float: right;
+  padding: 20px;
+}
 
-   .main a {
-   	text-decoration: none;
-   	color: red;
-   }
+.sidebar h3 {
+  font-weight: bold;
+}
 
-   .main a:hover{
-   	background-color: lightblue;
-   	color: white;
-   }
+.sidebar img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding: 5px;
+}
 
-   .main p {
-   	margin-bottom: 15px;
-   	font-size: 15px;
-   }
+.sidebar p {
+  font-size: 12px;
+}
 
-   .sidebar {
-      width: 300px;
-      float: right;
-      padding: 20px;
-   }
+.footer {
+  background-color: lightgray;
+  padding: 10px;
+}
 
-   .sidebar h3 {
-      font-weight: bold;
-   }
+.footer .tulisan {
+  color: black;
+  text-align: center;
+  font-size: 12px;
+}
 
-   .sidebar img {
-      width: 50px;
-      height: 50px;
-      float: left;
-      padding: 5px;
-   }
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
 
-   .sidebar p {
-      font-size: 12px;
-   }
-
-   .footer  {
-   	background-color: lightgray;
-   	padding: 10px;
-   }
-
-   .footer .tulisan {
-   	color: black;
-   	text-align: center;
-   	font-size: 12px;
-   }
-
-   .cf:before,
-   .cf:after {
-      content: " "; /* 1 */
-      display: table; /* 2 */
-   }
-
-   .cf:after {
-      clear: both;
-   }
+.cf:after {
+  clear: both;
+}
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
- .cf {
-   *zoom: 1;
+.cf {
+  *zoom: 1;
 }
