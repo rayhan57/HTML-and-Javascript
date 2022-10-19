@@ -16,6 +16,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
   background-color: #2d4263;
   box-shadow: 0px 0px 10px #2d4263;
 }
@@ -47,6 +48,10 @@ ul li a:hover {
   color: #c84b31;
 }
 
+.active {
+  color: #c84b31;
+}
+
 main {
   overflow: auto;
   padding: 20px;
@@ -59,12 +64,12 @@ main {
 
 #first {
   height: 100vh;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 #second {
   height: 100vh;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .hero {
@@ -206,7 +211,7 @@ aside {
   line-height: 25px;
   border-radius: 10px;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 aside:hover {
@@ -217,4 +222,10 @@ aside:hover {
   float: left;
   margin-right: 20px;
   padding-left: 20px;
+}
+
+footer {
+  background-color: #2d42638c;
+  text-align: center;
+  color: #ecdbba;
 }
