@@ -15,10 +15,6 @@ function masukanListBuku(data) {
     }
     listBuku.unshift(data);
 
-    if (listBuku.lenth > 5) {
-      listBuku.pop();
-    }
-
     localStorage.setItem(storageKey, JSON.stringify(listBuku));
   }
 }
@@ -39,10 +35,11 @@ function masukanKeRakBuku() {
   belumSelesai.innerHTML = "";
   sudahSelesai.innerHTML = "";
   for (let buku of dataBuku) {
-    let row = document.createElement("tr");
-    row.innerHTML = "<h3>" + buku.title + "</h3>";
-    row.innerHTML = "<p>" + buku.author + "</p>";
-    row.innerHTML = "<p>" + buku.year + "</p>";
+    let row = document.createElement(
+      `<article>
+      
+      </article>`
+    );
 
     if (inputCheck) {
       sudahSelesai.appendChild(row);
@@ -75,3 +72,21 @@ inputBuku.addEventListener("submit", function () {
   masukanListBuku(dataBukuBaru);
   masukanKeRakBuku();
 });
+
+const belumSelesai = document.getElementById("incompleteBookshelfList");
+belumSelesai.innerHTML = "";
+let row = document.createElement("article");
+const atribute = document.createAttribute("class");
+atribute.value = "book_item";
+
+row.innerHTML = `<h3>Book Title</h3>
+<p>Penulis:</p>
+<p>Tahun:</p>
+<div class="action">
+<button class="green">Selesai dibaca</button>
+<button class="red">Hapus buku</button>
+</div>
+`;
+
+row.setAttributeNode(atribute);
+belumSelesai.appendChild(row);
