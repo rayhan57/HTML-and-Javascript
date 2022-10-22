@@ -60,7 +60,7 @@ function renderUserList() {
   }
 }
 
-submitAction.addEventListener("submit", function (event) {
+submitAction.addEventListener("submit", function () {
   const inputNama = document.getElementById("nama").value;
   const inputUmur = document.getElementById("umur").value;
   const inputDomisili = document.getElementById("domisili").value;

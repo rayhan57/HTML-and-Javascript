@@ -1,6 +1,7 @@
 const storageKey = "RAK_BUKU";
 const inputBuku = document.getElementById("inputBook");
 const rakBuku = localStorage.getItem(storageKey);
+const inputCheck = document.getElementById("inputBookIsComplete").checked;
 
 function cekPenyimpanan() {
   return typeof Storage !== "undefined";
@@ -39,9 +40,38 @@ function masukanKeRakBuku() {
   sudahSelesai.innerHTML = "";
   for (let buku of dataBuku) {
     let row = document.createElement("tr");
-    row.innerHTML = "<h3>" + buku.judul + "</h3>";
-    row.innerHTML = "<p>" + buku.penulis + "</p>";
-    row.innerHTML = "<p>" + buku.tahun + "</p>";
-    belumSelesai.appendChild(row);
+    row.innerHTML = "<h3>" + buku.title + "</h3>";
+    row.innerHTML = "<p>" + buku.author + "</p>";
+    row.innerHTML = "<p>" + buku.year + "</p>";
+
+    if (inputCheck) {
+      sudahSelesai.appendChild(row);
+    } else {
+      belumSelesai.appendChild(row);
+    }
   }
 }
+
+inputBuku.addEventListener("submit", function () {
+  const inputJudul = document.getElementById("inputBookTitle").value;
+  const inputPenulis = document.getElementById("inputBookAuthor").value;
+  const inputTahun = document.getElementById("inputBookYear").value;
+
+  let status;
+  if (inputCheck) {
+    status = true;
+  } else {
+    status = false;
+  }
+
+  const dataBukuBaru = {
+    id: Math.floor(new Date()),
+    title: inputJudul,
+    author: inputPenulis,
+    year: inputTahun,
+    isComplete: status,
+  };
+
+  masukanListBuku(dataBukuBaru);
+  masukanKeRakBuku();
+});
