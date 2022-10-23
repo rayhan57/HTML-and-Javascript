@@ -34,13 +34,20 @@ function masukanKeRakBuku() {
 
   belumSelesai.innerHTML = "";
   sudahSelesai.innerHTML = "";
-  for (let buku of dataBuku) {
-    let row = document.createElement(
-      `<article>
-      
-      </article>`
-    );
 
+  for (let buku of dataBuku) {
+    let row = document.createElement("article"); //Buat element article
+    const atribute = document.createAttribute("class"); //Buat attribute class
+    atribute.value = "book_item"; //Isi attribute class dengan book_item
+    row.innerHTML = `<h3>${buku.title}</h3>
+                  <p>Penulis: ${buku.author}</p>
+                  <p>Tahun: ${buku.year}</p>
+                  <div class="action">
+                  <button class="green">Selesai dibaca</button>
+                  <button class="red">Hapus buku</button>
+                  </div>
+                  `;
+    row.setAttributeNode(atribute);
     if (inputCheck) {
       sudahSelesai.appendChild(row);
     } else {
@@ -73,20 +80,17 @@ inputBuku.addEventListener("submit", function () {
   masukanKeRakBuku();
 });
 
-const belumSelesai = document.getElementById("incompleteBookshelfList");
-belumSelesai.innerHTML = "";
-let row = document.createElement("article");
-const atribute = document.createAttribute("class");
-atribute.value = "book_item";
+window.addEventListener("load", function () {
+  if (cekPenyimpanan()) {
+    if (rakBuku !== null) {
+      masukanKeRakBuku();
+    }
+  } else {
+    alert("Browser yang Anda gunakan tidak mendukung Web Storage");
+  }
+});
 
-row.innerHTML = `<h3>Book Title</h3>
-<p>Penulis:</p>
-<p>Tahun:</p>
-<div class="action">
-<button class="green">Selesai dibaca</button>
-<button class="red">Hapus buku</button>
-</div>
-`;
-
-row.setAttributeNode(atribute);
-belumSelesai.appendChild(row);
+const btnHapus = document.querySelector(".red");
+btnHapus.addEventListener("click", function () {
+  console.log("Dipencet");
+});
