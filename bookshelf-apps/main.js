@@ -1,7 +1,7 @@
 const storageKey = "RAK_BUKU";
 const inputBuku = document.getElementById("inputBook");
 const rakBuku = localStorage.getItem(storageKey);
-const inputCheck = document.getElementById("inputBookIsComplete").checked;
+let check = document.getElementById("inputBookIsComplete");
 
 function cekPenyimpanan() {
   return typeof Storage !== "undefined";
@@ -48,7 +48,8 @@ function masukanKeRakBuku() {
                   </div>
                   `;
     row.setAttributeNode(atribute);
-    if (inputCheck) {
+
+    if (check.checked) {
       sudahSelesai.appendChild(row);
     } else {
       belumSelesai.appendChild(row);
@@ -56,24 +57,29 @@ function masukanKeRakBuku() {
   }
 }
 
+function statusBuku() {
+  let status;
+  if (check.checked) {
+    status = true;
+  } else {
+    status = false;
+  }
+  return status;
+}
+
 inputBuku.addEventListener("submit", function () {
   const inputJudul = document.getElementById("inputBookTitle").value;
   const inputPenulis = document.getElementById("inputBookAuthor").value;
   const inputTahun = document.getElementById("inputBookYear").value;
 
-  let status;
-  if (inputCheck) {
-    status = true;
-  } else {
-    status = false;
-  }
+  statusBuku();
 
   const dataBukuBaru = {
     id: Math.floor(new Date()),
     title: inputJudul,
     author: inputPenulis,
     year: inputTahun,
-    isComplete: status,
+    isComplete: statusBuku(),
   };
 
   masukanListBuku(dataBukuBaru);
@@ -88,9 +94,4 @@ window.addEventListener("load", function () {
   } else {
     alert("Browser yang Anda gunakan tidak mendukung Web Storage");
   }
-});
-
-const btnHapus = document.querySelector(".red");
-btnHapus.addEventListener("click", function () {
-  console.log("Dipencet");
 });
