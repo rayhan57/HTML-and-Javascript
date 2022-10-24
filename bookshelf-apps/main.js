@@ -89,6 +89,7 @@ inputBuku.addEventListener("submit", function () {
 function selesaiDibaca() {
   const dataBuku = getListBuku();
   const sudahSelesai = document.getElementById("completeBookshelfList");
+
   sudahSelesai.innerHTML = "";
   for (let buku of dataBuku) {
     let row = document.createElement("article"); //Buat element article
