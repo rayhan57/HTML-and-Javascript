@@ -21,7 +21,7 @@ function masukanListBuku(data) {
 
 function getListBuku() {
   if (cekPenyimpanan()) {
-    return JSON.parse(localStorage.getItem(storageKey));
+    return JSON.parse(rakBuku);
   } else {
     [];
   }
@@ -43,8 +43,8 @@ function masukanKeRakBuku() {
                   <p>Penulis: ${buku.author}</p>
                   <p>Tahun: ${buku.year}</p>
                   <div class="action">
-                  <button class="green">Selesai dibaca</button>
-                  <button class="red">Hapus buku</button>
+                  <button class="green" onclick="selesaiDibaca()">Selesai dibaca</button>
+                  <button class="red" onclick="hapusBuku()">Hapus buku</button>
                   </div>
                   `;
     row.setAttributeNode(atribute);
@@ -85,6 +85,31 @@ inputBuku.addEventListener("submit", function () {
   masukanListBuku(dataBukuBaru);
   masukanKeRakBuku();
 });
+
+function selesaiDibaca() {
+  const dataBuku = getListBuku();
+  const sudahSelesai = document.getElementById("completeBookshelfList");
+  sudahSelesai.innerHTML = "";
+  for (let buku of dataBuku) {
+    let row = document.createElement("article"); //Buat element article
+    const atribute = document.createAttribute("class"); //Buat attribute class
+    atribute.value = "book_item"; //Isi attribute class dengan book_item
+    row.innerHTML = `<h3>${buku.title}</h3>
+                  <p>Penulis: ${buku.author}</p>
+                  <p>Tahun: ${buku.year}</p>
+                  <div class="action">
+                  <button class="green" onclick="belumSelesaiDibaca()">Belum selesai di Baca</button>
+                  <button class="red" onclick="hapusBuku()">Hapus buku</button>
+                  </div>
+                  `;
+    row.setAttributeNode(atribute);
+    sudahSelesai.appendChild(row);
+  }
+}
+
+function hapusBuku() {
+  localStorage.removeItem(storageKey);
+}
 
 window.addEventListener("load", function () {
   if (cekPenyimpanan()) {
