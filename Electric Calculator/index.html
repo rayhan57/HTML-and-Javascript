@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electric Calculator</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="px-2">
+    <div class="container shadow rounded mt-5 py-3 bg-light border">
+      <div class="row d-flex justify-content-center">
+        <img src="assets/img/logo.png" class="logo" />
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md">
+          <h2 class="fs-3">PERHITUNGAN BIAYA LISTRIK</h2>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div class="row mt-4 px-3">
+        <div class="row">
+          <div class="col-auto pe-2">
+            <label for="perkwh" class="col-form-label fw-bold"
+              >Harga Perkwh</label
+            >
+          </div>
+          <div class="col">
+            <input
+              type="number"
+              id="perkwh"
+              class="form-control"
+              placeholder="Misal: 1500"
+              maxlength="4"
+            />
+            <span class="text-danger d-none error1"
+              >Harga perkwh tidak boleh kosong!</span
+            >
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-auto pe-4">
+            <label for="dayalistrik" class="col-form-label fw-bold"
+              >Daya Listrik</label
+            >
+          </div>
+          <div class="col">
+            <input
+              type="number"
+              id="dayalistrik"
+              class="form-control"
+              placeholder="Berapa Watt"
+            />
+            <span class="text-danger d-none error2"
+              >Daya listrik tidak boleh kosong!</span
+            >
+          </div>
+          <div class="col-1">
+            <span class="fw-semibold">Watt</span>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-auto pemakaian">
+            <label for="pemakaian" class="col-form-label fw-bold"
+              >Pemakaian</label
+            >
+          </div>
+          <div class="col">
+            <input
+              type="number"
+              id="pemakaian"
+              class="form-control"
+              placeholder="Berapa Jam"
+            />
+            <span class="text-danger d-none error3"
+              >Waktu Pemakaian tidak boleh kosong!</span
+            >
+          </div>
+          <div class="col-1">
+            <span class="fw-semibold">Jam</span>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <button type="submit" class="btn btn-primary fw-semibold hitung">
+            Hitung
+          </button>
+        </div>
+      </div>
+      <!-- Akhir input -->
+
+      <!-- Hasil -->
+      <div class="row mt-5 text-center">
+        <!-- Sehari -->
+        <div class="col-md">
+          <h5>Biaya dalam sehari</h5>
+          <p class="fw-semibold sehari"></p>
+        </div>
+        <!-- Seminggu -->
+        <div class="col-md">
+          <h5>Biaya dalam seminggu</h5>
+          <p class="fw-semibold seminggu"></p>
+        </div>
+        <!-- Sebulan -->
+        <div class="col-md">
+          <h5>Biaya dalam sebulan</h5>
+          <p class="fw-semibold sebulan"></p>
+        </div>
+      </div>
+      <!-- Akhir hasil -->
+    </div>
+
+    <!-- Footer -->
+    <div class="container pt-2">
+      <div class="row text-center">
+        <p class="fw-light">
+          © 2022 RAYHAN LINGGA BUANA - All Rights Reserved.
+        </p>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
